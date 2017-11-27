@@ -9,7 +9,7 @@ permalink: /:title
 title: "ProcGen"
 description: "build dreams, see beauty, learn to think"
 baseurl: ""
-url: "https://hoqqanen.github.io/procgen/" # replace with site's url
+url: "https://hoqqanen.github.io/procgen_site/" # replace with site's url
 
 author: "George Hoqqanen"
 address: ""
