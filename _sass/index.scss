@@ -1,0 +1,55 @@
+.Index-header {
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    font-size: 32px;
+    height: 100px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.Index-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 10px 10px;
+}
+.Index-rowhead {
+    flex-shrink: 1;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.Index-rowbody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+.Index-headitem {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+
+    h1 {
+        font-size: 24px;
+        font-weight: normal;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+}
+.Index-rowitem {
+    align-items: center;
+    border: 1px dashed rgba(255,255,255,0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 250px;
+
+    img {
+        margin-bottom: 10px;
+        max-width: 250px;
+    }
+}

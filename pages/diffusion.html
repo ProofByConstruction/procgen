@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="Post">
+    <h1>Diffusion</h1>
+    <p>
+        Welcome to our first procgen tutorial! In this tutorial we'll be introducing a very simple process that works on pixels, the most primitive of all image data. The only thing you need to know is that the screen is made up of a grid of pixels! Let's get to it.
+    </p>
+
+    <h2>Seeding the canvas</h2>
+    <p>
+        First let's seed the canvas where every pixel gets a random gray value between white and black. Numerically black will be 0 in our color scheme, and white will be 255. If every pixel gets a random value in 0 to 255 we get the following (click to rerandomize):
+    </p>
+
+
+    <h2>Neighbor swapping</h2>
+    <p>
+        Now that  we have some data in pixels, we can change them over time. The rule that we will start with is very simple: at each time step every pixel (not on the border) looks at its four neighbors and changes itself to have the color of the pixel it chose. Click to restart:
+    </p>
+
+    <p data-height="400" data-theme-id="0" data-slug-hash="jazeVv" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Diffusion Procgen site" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/jazeVv/">Diffusion Procgen site</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    
+
+    <h2>What can we change? [Pause here]</h2>
+    <p>
+        This process doesn't seem like it has too many parameters, but there are always ways of extending an idea. Take a couple minutes to think of the ways you could edit this process. Once you run out of ideas, look ahead for some variations.
+    </p>
+
+    <h2>Colors, Seed, Slanting</h2>
+    <p>
+        We could use random colors instead of black and white, or we could choose among a palette.
+    </p>
+
+    <p data-height="400" data-theme-id="0" data-slug-hash="gXKrrw" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Diffusion Procgen site gui" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/gXKrrw/">Diffusion Procgen site gui</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+    <h2>Slanting movement</h2>
+    <p>
+        So far we've been choosing one of the four directions (NEWS) at "random", but really this meant where each direction had an equally likely chance of being chosen. What if we skew the odds, so that it's more likely to pick the North or West neighbor? Modify the relative probabilities to create different effects.
+    </p>
+
+
+
+    <h2>Diagonals? Turing diffusion? </h2>
+</div>
