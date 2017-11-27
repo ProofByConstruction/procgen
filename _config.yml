@@ -8,7 +8,7 @@ permalink: /:title
 
 title: "ProcGen"
 description: "build dreams, see beauty, learn to think"
-baseurl: ""
+baseurl: "/procgen_site" # swap this out when running locally
 url: "https://hoqqanen.github.io/procgen_site/" # replace with site's url
 
 author: "George Hoqqanen"
