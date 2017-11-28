@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="Post">
+    <h1>Working with pixels</h1>
+    <p>
+        Working directly with pixels affords the unique benefit of being able to use images. It also gives a context where the visual output is identical with the data that generated it, i.e. it has one of the most primitive Renders, one of the <a href="{{site.baseurl}}/pages/pillars">three pillars.</a>
+    </p>
+
+    <h2>Pixel Running, Radial Sampling</h2>
+    <p>
+        Starting with an image, we traverse its pixels from left to right, top to bottom. We start by choosing a random length L, and then copy the color of the first pixel L times. At step L+1, we choose a new length and copy the current pixel's color. If all lengths are 1 we recover the initial image, play with various lengths to see the results for yourself.
+    </p>
+    <p data-height="400" data-theme-id="0" data-slug-hash="zPJdNK" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Pixel running" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/zPJdNK/">Pixel running</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <br><br>
+
+
+    <h2>Interlacing</h2>
+    <p>
+        Here we take 2 or 4 source images and interleave them so that each little 2x2 pixel block features pixels from each. If we used an all-white and all-black image, this would generate a very fine checkerboard. We can change the block size to make a larger checkerboard and make something of a quilt out of chunks of the images.
+    </p>
+    <p data-height="400" data-theme-id="0" data-slug-hash="EbproO" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Interlacer" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/EbproO/">Interlacer</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <br><br>
+
+    <h2>Diffusion</h2>
+    <p>
+        If you haven't looked at this process already, head on over to the <a href="{{site.baseurl}}/pages/diffusion">diffusion</a> page.
+    </p>
+    <p data-height="400" data-theme-id="0" data-slug-hash="QOBzGL" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Diffusion Variants" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/QOBzGL/">Diffusion Variants</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <br><br>
+
+</div>

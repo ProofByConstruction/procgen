@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Josefin Slab', serif;
+    line-height: 1.2em;
     margin: 0;
     padding: 0;
 }
@@ -11,10 +12,11 @@ body {
     align-self: center;
     display: flex;
     flex-direction: column;
+    margin: 20px 0;
     width: 1000px;
 
     h1, h2 {
-        margin: 10px 0 0 0;
+        margin: 10px 0;
     }
 
 }

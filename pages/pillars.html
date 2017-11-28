@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="Post">
+    <h1>Three Pillars: A Simple Metamodel</h1>
+    <p>
+        Welcome to your first metamodel! You could probably also call it something like a framework. The Three Pillars model is a way of decomposing processes into a few high level ideas. Once a process is parsed into the three pillars, it can be much easier to find adjacent processes and free parameters within the process. Onward to the three pillars then: seed, update, and render.
+    </p>
+
+    <h2>Seed</h2>
+    <p>
+        The seed defines the initial conditions of our data. Before now we've seen examples of initial conditions making an impact on the result, for example when we seeded our <a href="{{site.baseurl}}/pages/diffusion">diffusion process</a> with random noise, a checkerboard, or an image.
+    </p>
+
+    <h2>Update</h2>
+    <p>
+        An update determines how the system changes over time. It is a function that takes the current state and returns a new state (of the same type). We've seen several update rules on the same kind of data (a set of points) as defining different <a href="{{site.baseurl}}/pages/growth">growth processes</a>.
+    </p>
+
+    <h2>Render</h2>
+    <p>
+        This is how we draw the data. It can define shape, color, or more complicated things like a <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation">composite operation</a>. 
+    </p>
+    
+    <h2>Example: Chasing Points</h2>
+    <p>
+        Play around with the three pillars in the simple example below. We start with some number of random points in a cyclic graph (Seed). At each step each point moves closer to its neighbor (Update), then we draw a white dot at each point (Render).
+    </p>
+    
+    <p data-height="400" data-theme-id="0" data-slug-hash="VrGGKr" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Seed Update Render explorer" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/VrGGKr/">Seed Update Render explorer</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</div>
