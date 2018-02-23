@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="Post">
+    <h1>Color Maps</h1>
+    <p>
+        Color maps are an abstraction born for working with images, but can be applied in other situations as well. Let's start with color maps that are simply images, i.e. the map is an assignment of pixels to colors, specified by the data of an image.
+    </p>
+
+    <h2>Repainting an Image: Pixel Running and Radial Sampling</h2>
+    <p>
+        In both of the following processes we'll do the same thing. First we take an image, which to us is a grid of pixels. Next, we make a fresh canvas and go over each of the pixels in that canvas. We use something from the original image to help us pick a color for each pixel.
+    </p>
+    <p>
+        Pixel Running is a process which gives a streak-like effect to an image: <br>
+        For each row, starting at the left edge, take the color of the current pixel (in the image) and copy it some number of times to the right. Take the color of the pixel where it stopped and copy that color some number of times. Play with the slider to get a sense of how the maximum length changes the effect, or use a constant length to see how it blockifies the image.
+    </p>
+    <p data-height="400" data-theme-id="0" data-slug-hash="zPJdNK" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Pixel running" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/zPJdNK/">Pixel Data Runner</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <p>
+        Radial Sampling on the other hand gives a blurred, grainy effect: <br>
+        For every pixel, pick a random nearby pixel in the corresponding image and color it with that color. If the maximum distance is 0, then only that same pixel will be chosen and the image recreated. If the distance is large, things get noisier. Play with the radius yourself to see.
+    </p>
+    <p data-height="400" data-theme-id="0" data-slug-hash="eVjGyE" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Pixel running" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/eVjGyE/">Pixel Data Radial</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <br><br>
+
+
+    <h2>Interlacing</h2>
+    <p>
+        Here we take 2 or 4 source images and interleave them so that each little 2x2 pixel block features pixels from each. If we used an all-white and all-black image, this would generate a very fine checkerboard. We can change the block size to make a larger checkerboard and make something of a quilt out of chunks of the images.
+    </p>
+    <p data-height="400" data-theme-id="0" data-slug-hash="EbproO" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Interlacer" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/EbproO/">Interlacer</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <br><br>
+
+    <h2>Diffusion</h2>
+    <p>
+        If you haven't looked at this process already, head on over to the <a href="{{site.baseurl}}/pages/diffusion">diffusion</a> page.
+    </p>
+    <p data-height="400" data-theme-id="0" data-slug-hash="QOBzGL" data-default-tab="js,result" data-user="hoqqanen" data-embed-version="2" data-pen-title="Diffusion Variants" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/hoqqanen/pen/QOBzGL/">Diffusion Variants</a> by George Hoqqanen (<a href="https://codepen.io/hoqqanen">@hoqqanen</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <br><br>
+
+    <h2>Summary</h2>
+    <p>
+        So far we've explored how to use image data as a color map, and some of the processes that can be applied to such a map. We can use maps other than images though. For example, we can define color maps through pure functions! What's more, we can use a latent color map to sample colors of objects (beyond pixels) in the canvas that we wish to color. If we define a color map which evolves through time, this can give objects a color which evolves.
+    </p>
+
+</div>
